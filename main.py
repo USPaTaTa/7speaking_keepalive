@@ -3,7 +3,6 @@ from time import sleep
 
 
 def run():
-    # clear the screen before running the script
     print("\033[H\033[J")
     email = input("Enter your email: ")
     print("\033[H\033[J")
