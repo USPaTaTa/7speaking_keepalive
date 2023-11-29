@@ -16,7 +16,6 @@ class KeepAlive:
         if self.headless:
             self.options.add_argument("--headless")
         self.driver = webdriver.Firefox(options=self.options)
-        self.driver.install_addon("./buster.xpi")
         print("Logging in...")
         self.driver.get("https://user.7speaking.com")
         self.driver.find_element(By.NAME, "username").send_keys(self.email)
