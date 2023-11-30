@@ -29,20 +29,20 @@ def run():
     while True:
         try:
             sleep_time = input(
-                "How many seconds do you want to wait between each login/logout ? (in seconds, default 3600, max 3600): "
+                "How many seconds do you want to wait between each login/logout ? (in seconds, default 2400, max 2400): "
             )
-            supported_sleep_time = [str(i) for i in range(1, 3601)]
+            supported_sleep_time = [str(i) for i in range(1, 2401)]
             supported_sleep_time.append("")
             if sleep_time not in supported_sleep_time:
                 raise Exception()
             if sleep_time == "":
-                sleep_time = 3600
+                sleep_time = 2400
             else:
                 sleep_time = int(sleep_time)
             print("\033[H\033[J")
             break
         except:
-            print("Please enter a number between 1 and 3600 seconds or leave empty")
+            print("Please enter a number between 1 and 2400 seconds or leave empty")
     while True:
         try:
             print(
